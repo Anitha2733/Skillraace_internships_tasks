@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class ChangeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the input amount N
+        int N = scanner.nextInt();
+        
+        // Denominations available
+        int[] denominations = {100, 50, 10, 5, 2, 1};
+        
+        // Variable to store the count of notes
+        int noteCount = 0;
+        
+        // Loop through each denomination
+        for (int denomination : denominations) {
+            if (N >= denomination) {
+                // Calculate the number of notes of the current denomination
+                noteCount += N / denomination;
+                // Reduce the amount by the equivalent value of the used notes
+                N = N % denomination;
+            }
+        }
+        
+        // Print the total count of notes
+        System.out.println(noteCount);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}

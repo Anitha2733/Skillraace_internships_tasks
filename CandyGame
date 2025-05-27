@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class CandyGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Read the input integer as a string
+        String input = scanner.nextLine();
+        scanner.close();
+        
+        // Initialize a counter for occurrences of '4'
+        int count = 0;
+        
+        // Iterate through each character in the string
+        for (int i = 0; i < input.length(); i++) {
+            // Check if the current character is '4'
+            if (input.charAt(i) == '4') {
+                count++;
+            }
+        }
+        
+        // Print the result
+        System.out.println(count);
+    }
+}

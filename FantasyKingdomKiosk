@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+ 
+
+public class FantasyKingdomKiosk {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+ 
+
+        // Input: Reading the age of the person
+
+        int age = scanner.nextInt();
+
+ 
+
+        // Process: Determine if the person is allowed or not based on their age
+
+        if (age < 15 || age > 60) {
+
+            System.out.println("Not Allowed");
+
+        } else {
+
+            System.out.println("Allowed");
+
+        }
+
+ 
+
+        // Closing the scanner
+
+        scanner.close();
+
+    }
+
+}

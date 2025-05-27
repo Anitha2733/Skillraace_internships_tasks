@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+
+public class SumOfOddAndEvenDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input: ");
+        long n = scanner.nextLong();
+
+        int sumOdd = 0;
+        int sumEven = 0;
+
+        while (n != 0) {
+            int digit = (int) (n % 10);
+            if (digit % 2 == 0) {
+                sumEven += digit;
+            } else {
+                sumOdd += digit;
+            }
+            n /= 10;
+        }
+
+        System.out.println("Output: " + sumOdd + " " + sumEven);
+    }
+}
